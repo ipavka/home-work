@@ -3,10 +3,10 @@ import MeStyle from './Message.module.css';
 
 
 type MessageType = {
-    avatar: string,
-    name: string,
-    message: string,
-    time: string,
+    avatar: string
+    name: string
+    message: string
+    time: string
 }
 
 function Message(props: MessageType) {

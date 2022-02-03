@@ -20,7 +20,7 @@
 
 .comment_bubble {
     height: 80%;
-    width: 60%;
+    width: 40%;
     padding: 15px;
     background: #F66969;
     position: relative;
@@ -41,7 +41,8 @@
 }
 
 .time {
-    padding-left: 90%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .avatar {
