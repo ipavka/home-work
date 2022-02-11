@@ -17,7 +17,6 @@ function Affairs(props: AffairsPropsType) {
             deleteAffairCallback={props.deleteAffairCallback}
         />
     ))
-    console.log(mappedAffairs)
     const setAll = (title: FilterType) => {
         props.setFilter(title)
     }

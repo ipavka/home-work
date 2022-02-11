@@ -33,7 +33,6 @@ export const filterAffairs = (affairs: AffairType[], filter: FilterType): Affair
             return el.priority === filter
         })
     } else {
-        console.log(affairs)
         return affairs.filter((el) => {
             return el.priority === filter
         })
