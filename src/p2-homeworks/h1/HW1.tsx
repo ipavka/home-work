@@ -13,7 +13,7 @@ function HW1() {
     return (
         <div>
             <hr/>
-            homeworks 1
+            <h2 style={{color: '#ff0b0b', margin: '5px'}}>homeworks 1</h2>
             {/*should work (должно работать)*/}
             <Message avatar={messageData.avatar}
                      name={messageData.name}

@@ -1,7 +1,39 @@
-.someClass {
+.mainHM3 {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 275px;
+    height: 50px;
+    margin: 5px;
+}
 
+.mainHM3 button {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: chartreuse;
+    padding: 0 15px 0 15px;
+    background-color: #196c11;
+}
+
+.counter {
+    font-size: large;
+    font-weight: bold;
+    color: #ff0b0b;
 }
 
 .error {
-    border: 1px solid red;
+    outline: none;
+    border: 2px solid red;
+}
+
+.errorText {
+    color: red;
+    order: 1;
+    margin-left: 5px;
+}
+
+.disable {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
 }

@@ -58,7 +58,7 @@ function HW2() {
     return (
         <div className={affairStyle.someClass}>
             <hr/>
-            homeworks 2
+            <h2 style={{color: '#ff0b0b', margin: '5px'}}>homeworks 2</h2>
 
             {/*should work (должно работать)*/}
             <Affairs
