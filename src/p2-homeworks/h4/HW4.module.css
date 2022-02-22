@@ -11,3 +11,11 @@
 .testSpanError {
     color: blue;
 }
+
+
+.testInput {
+    padding: 0.375rem 0.375rem;
+    border: 1px solid #bdbdbd;
+    border-radius:7px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}

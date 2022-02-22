@@ -6,7 +6,7 @@ import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 
 function HW4() {
     const [text, setText] = useState<string>('')
-    const error = text ? '' : 'error'
+    const error = text ? '' : 'Field is required'
 
     const showAlert = () => {
         if (error) {
@@ -22,7 +22,7 @@ function HW4() {
     return (
         <div>
             <hr/>
-            homeworks 4
+            <h2 style={{color: '#ff0b0b', margin: '5px'}}>homeworks 4</h2>
 
             <div className={s.column}>
                 <SuperInputText
@@ -34,7 +34,7 @@ function HW4() {
                 />
 
                 <SuperInputText
-                    className={s.blue} // проверьте, рабоет ли смешивание классов
+                    className={s.testInput} // проверьте, рабоет ли смешивание классов
                 />
 
                 {/*----------------------------------------------------*/}
@@ -44,7 +44,8 @@ function HW4() {
                 </SuperButton>
 
                 <SuperButton
-                    red // пропсу с булевым значением не обязательно указывать true
+                    red={false} // пропсу с булевым значением не обязательно указывать true
+                    // red={true} // пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
                 >
                     delete {/*// название кнопки попадёт в children*/}
