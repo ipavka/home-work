@@ -2,6 +2,7 @@ import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 import affairStyle from './Affairs.module.css'
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 type AffairsPropsType = { // need to fix any
     data: AffairType[]
@@ -33,22 +34,46 @@ function Affairs(props: AffairsPropsType) {
     return (
         <div>
             {mappedAffairs}
-            <button className={affairStyle.btn_filter} onClick={() => {
+            <SuperButton onClick={() => {
                 setAll('all')
-            }}>All
-            </button>
-            <button className={affairStyle.btn_filter} onClick={() => {
+            }}>
+                All
+            </SuperButton>
+
+            <SuperButton onClick={() => {
                 setHigh('high')
-            }}>High
-            </button>
-            <button className={affairStyle.btn_filter} onClick={() => {
+            }}>
+                High
+            </SuperButton>
+
+            <SuperButton onClick={() => {
                 setMiddle('middle')
-            }}>Middle
-            </button>
-            <button className={affairStyle.btn_filter} onClick={() => {
+            }}>
+                Middle
+            </SuperButton>
+
+            <SuperButton onClick={() => {
                 setLow('low')
-            }}>Low
-            </button>
+            }}>
+                Low
+            </SuperButton>
+
+            {/*<button className={affairStyle.btn_filter} onClick={() => {*/}
+            {/*    setAll('all')*/}
+            {/*}}>All*/}
+            {/*</button>*/}
+            {/*<button className={affairStyle.btn_filter} onClick={() => {*/}
+            {/*    setHigh('high')*/}
+            {/*}}>High*/}
+            {/*</button>*/}
+            {/*<button className={affairStyle.btn_filter} onClick={() => {*/}
+            {/*    setMiddle('middle')*/}
+            {/*}}>Middle*/}
+            {/*</button>*/}
+            {/*<button className={affairStyle.btn_filter} onClick={() => {*/}
+            {/*    setLow('low')*/}
+            {/*}}>Low*/}
+            {/*</button>*/}
         </div>
     )
 }
