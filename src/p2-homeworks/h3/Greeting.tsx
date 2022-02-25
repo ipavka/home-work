@@ -1,5 +1,7 @@
 import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import SuperInputText from "../h4/common/c1-SuperInputText/SuperInputText";
 
 
 type GreetingPropsType = {
@@ -15,17 +17,16 @@ const Greeting: React.FC<GreetingPropsType> = (
     {name, setNameCallback, addUser, error, totalUsers} // деструктуризация пропсов
 ) => {
 
-    const inputClass = error.length > 1 ? s.error : '' // need to fix with (?:)
-    const buttonClass = error.length > 1 ? s.disable : ''
     const onKeyPressHandler = (event: KeyboardEvent<HTMLInputElement>) => {  // решил тут оставить
         if (event.key === 'Enter') addUser();
     }
 
     return (
         <div className={s.mainHM3}>
-            <input onKeyPress={onKeyPressHandler} value={name} onChange={setNameCallback} className={inputClass}/>
-            <span className={s.errorText}>{error}</span>
-            <button className={buttonClass} onClick={addUser}>add</button>
+            <SuperInputText value={name} onChange={setNameCallback} error={error} onKeyPress={onKeyPressHandler}/>
+            <SuperButton onClick={addUser} disabled={error.length !== 0} className={s.customButton}>
+                add
+            </SuperButton>
             <span className={s.counter}>{totalUsers}</span>
         </div>
     )

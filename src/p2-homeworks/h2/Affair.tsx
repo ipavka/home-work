@@ -19,10 +19,7 @@ function Affair(props: AffairPropsType) {
         <div className={affairStyle.item_text}>
             <span>{props.affair.name}</span>
             <span className={affairStyle.priority}>{props.affair.priority}</span>
-            {/*<button onClick={() => {*/}
-            {/*    deleteCallback(props.affair._id)*/}
-            {/*}}>delete*/}
-            {/*</button>*/}
+
             <SuperButton onClick={() => {
                 deleteCallback(props.affair._id)
             }}>

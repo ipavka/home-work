@@ -1,7 +1,6 @@
 import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
-import affairStyle from './Affairs.module.css'
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 type AffairsPropsType = { // need to fix any
@@ -57,23 +56,6 @@ function Affairs(props: AffairsPropsType) {
             }}>
                 Low
             </SuperButton>
-
-            {/*<button className={affairStyle.btn_filter} onClick={() => {*/}
-            {/*    setAll('all')*/}
-            {/*}}>All*/}
-            {/*</button>*/}
-            {/*<button className={affairStyle.btn_filter} onClick={() => {*/}
-            {/*    setHigh('high')*/}
-            {/*}}>High*/}
-            {/*</button>*/}
-            {/*<button className={affairStyle.btn_filter} onClick={() => {*/}
-            {/*    setMiddle('middle')*/}
-            {/*}}>Middle*/}
-            {/*</button>*/}
-            {/*<button className={affairStyle.btn_filter} onClick={() => {*/}
-            {/*    setLow('low')*/}
-            {/*}}>Low*/}
-            {/*</button>*/}
         </div>
     )
 }
