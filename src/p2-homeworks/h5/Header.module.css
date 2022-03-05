@@ -1,0 +1,36 @@
+.main {
+    display: flex;
+    position: relative;
+    right: 240px;
+    width: 300px;
+    justify-content: space-around;
+    padding: 5px;
+    transition-duration: 0.6s;
+    transition-delay: 0.9s;
+
+}
+
+.main a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.active__link {
+    color: #e55b5b;
+}
+
+.main:hover {
+    transform: translateX(250px);
+    transition-delay: 0s, 0s;
+}
+
+.hide {
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+    height: 25px;
+    background-color: #2fce32;
+    cursor: pointer;
+    user-select: none;
+}
