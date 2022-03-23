@@ -1,0 +1,18 @@
+.main {
+    width: 100%;
+    margin: 10px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    font-weight: bolder;
+}
+
+.button__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 27%;
+}
