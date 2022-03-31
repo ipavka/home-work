@@ -2,13 +2,13 @@ import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import s from './Clock.module.css'
 
-type SelectButtonType = 'start' | 'stop'
+type SelectButtonType = 'start' | 'stop' | 'none'
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>(new Date())
+    const [date, setDate] = useState<Date>()
     const [show, setShow] = useState<boolean>(false)
-    const [clicked, setClicked] = useState<SelectButtonType>('stop') // button selection
+    const [clicked, setClicked] = useState<SelectButtonType>('none') // button selection
 
     const stop = () => {
         setClicked('stop')
@@ -30,8 +30,8 @@ function Clock() {
         setShow(false)
     }
 
-    const stringTime = `${date.toLocaleTimeString()}`
-    const stringDate = `${date.toLocaleDateString()}`
+    const stringTime = `${date ? date.toLocaleTimeString() : 'press start'}`
+    const stringDate = `${date ? date.toLocaleDateString() : 'press start'}`
     const clickedStart = `${clicked === 'start' ? s.buttonOn : ''}`
     const clickedStop = `${clicked === 'stop' ? s.buttonOn : ''}`
 
