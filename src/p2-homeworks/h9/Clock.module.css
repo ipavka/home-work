@@ -1,0 +1,26 @@
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 300px;
+    margin-left: 10px;
+}
+
+.timeBlock {
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.buttonBlock {
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonOn {
+    border: 2px solid #545b58;
+}
+
