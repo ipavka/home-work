@@ -1,39 +1,42 @@
 import React, {useState} from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
-import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
+import {SuperDoubleRange} from './common/c8-SuperDoubleRange/SuperDoubleRange'
+import s from './HW11.module.css'
+
 
 function HW11() {
     const [value1, setValue1] = useState(0)
     const [value2, setValue2] = useState(100)
 
-    return (
-        <div>
-            <hr/>
-            homeworks 11
+    return (<>
+        <hr/>
+        <h2 style={{color: '#ff0b0b', margin: '5px'}}>homeworks 11</h2>
 
-            {/*should work (должно работать)*/}
+        <div className={s.mainBlock}>
             <div>
-                <span>{value1}</span>
                 <SuperRange
-                    // сделать так чтоб value1 изменялось
+                    onChangeRange={setValue1}
+                    value={value1}
+                    min={0}
+                    max={100}
                 />
             </div>
 
             <div>
-                <span>{value1}</span>
-                <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
-                />
-                <span>{value2}</span>
+                <SuperDoubleRange min={0}
+                                  max={100}
+                                  value1={value1}
+                                  value2={value2}
+                                  setValue2={setValue2}
+                                  setValue1={setValue1}/>
             </div>
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperRange/>*/}
-            {/*<AlternativeSuperDoubleRange/>*/}
-            <hr/>
         </div>
-    )
+        <hr/>
+        {/*для личного творчества, могу проверить*/}
+        {/*<AlternativeSuperRange/>*/}
+        {/*<AlternativeSuperDoubleRange/>*/}
+        <hr/>
+    </>)
 }
 
 export default HW11

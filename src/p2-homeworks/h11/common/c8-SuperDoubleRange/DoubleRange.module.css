@@ -1,3 +1,48 @@
+.slider {
+    position: relative;
+    width: 200px;
+    height: 7px;
+}
+
+.sliderTrack,
+.sliderRange,
+.sliderLeftValue,
+.sliderRightValue {
+    position: absolute;
+}
+
+.sliderTrack,
+.sliderRange {
+    border-radius: 5px;
+    height: 10px;
+}
+
+.sliderTrack {
+    background-color: #dadada;
+    width: 100%;
+    z-index: 1;
+}
+
+.sliderRange {
+    background-color: #538cec;
+    z-index: 2;
+}
+
+.sliderLeftValue,
+.sliderRightValue {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.sliderLeftValue {
+    left: 6px;
+}
+
+.sliderRightValue {
+    right: -4px;
+}
+
 .range {
     pointer-events: none;
     position: absolute;
@@ -6,47 +51,15 @@
     outline: none;
 }
 
-.slider {
-    position: relative;
-    width: 200px;
-    height: 7px;
-}
-.sliderTrack,
-.sliderRange,
-.sliderLeftValue {
-    position: absolute;
-}
-
-.sliderRange {
-    background-color: #dadada;
-    z-index: 2;
-
-}
-
-.sliderTrack,
-.sliderRange {
-    border-radius: 5px;
-    height: 10px;
-
-}
-
-.sliderTrack {
-    background-color: #538cec;
-    width: 100%;
-    z-index: 1;
-}
-
 .rangeLeft {
     z-index: 3;
 }
 
-.sliderLeftValue {
-    left: 6px;
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: 20px;
+.rangeRight {
+    z-index: 4;
 }
 
+/* Removing the default appearance */
 .range,
 .range::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -67,7 +80,6 @@
     position: relative;
 }
 
-
 /* For Firefox browsers */
 .range::-moz-range-thumb {
     background-color: #b425b4;
@@ -75,9 +87,9 @@
     border-radius: 50%;
     box-shadow: 0 0 1px 1px #ced4da;
     cursor: pointer;
-    height: 20px;
-    width: 20px;
-    margin-top: 5px;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
     pointer-events: all;
     position: relative;
 }
