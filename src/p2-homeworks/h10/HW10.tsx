@@ -4,6 +4,7 @@ import s from './HW10.module.css'
 import {useDispatch, useSelector} from "react-redux";
 import {AppStoreType} from "./bll/store";
 import {loadingAC} from "./bll/loadingReducer";
+import {Spinner} from "./spinner/Spinner";
 
 function HW10() {
 
@@ -27,14 +28,7 @@ function HW10() {
             <div className={s.twister}>
                 {loading
                     ? (
-                        <div className={s.bowl}>
-                            <div className={s.bowl_ring}>
-                                <div className={s.ball_holder}>
-                                    <div className={s.ball}>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <Spinner/>
                     ) : (
                         <div>
                             <SuperButton onClick={setLoading}>set loading...</SuperButton>
@@ -42,7 +36,6 @@ function HW10() {
                     )
                 }
             </div>
-
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
