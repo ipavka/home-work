@@ -1,23 +1,60 @@
-.dark {
-    background: dimgrey;
+
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    margin: auto;
 }
 
-.dark-text {
+.radioContainer {
+    display: flex;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 70%;
+    height: 300px;
+    border: 1px solid #dad0e1;
+    border-radius: 10px;
+    background: #f1e9ca;
+}
+
+
+.redText {
+    color: aqua;
+}
+
+.someText {
+    color: darkslateblue;
+}
+
+.darkText {
     color: aliceblue;
+}
+
+.yellow {
+    background: #ecec33;
+}
+
+.yellowText {
+    color: black;
 }
 
 .red {
     background: lightcoral;
 }
 
-.red-text {
-    color: aqua;
-}
-
 .some {
     background: lightgreen;
 }
 
-.some-text {
-    color: darkslateblue;
+.dark {
+    background: dimgrey;
 }
+
+
+

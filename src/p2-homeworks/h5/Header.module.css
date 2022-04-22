@@ -1,7 +1,7 @@
 .main {
     display: flex;
     position: relative;
-    right: 240px;
+    right: 230px;
     width: 300px;
     justify-content: space-around;
     padding: 5px;
