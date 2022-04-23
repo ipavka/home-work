@@ -69,8 +69,8 @@ export const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
                     minValRef.current = value;
                 }}
                 className={`${s.range} ${s.rangeLeft}`}
-                // @ts-ignore
-                style={{zIndex: value1 > max - 100 && "5"}}
+
+                style={{zIndex: value1 > max - 100 ? "5": undefined}}
             />
             <input
                 type="range"
