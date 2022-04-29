@@ -1,0 +1,39 @@
+.mainBlock, .items, .itemsBlock, .infoBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.itemsBlock {
+    border: 1px solid #070101;
+    border-radius: 10px;
+}
+
+.infoBlock {
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+}
+.infoBlock p {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.infoBlock div {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.mainBlock {
+    margin: auto;
+    max-width: 500px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.items {
+    padding-top: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
