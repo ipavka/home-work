@@ -28,9 +28,6 @@ export const Request = () => {
         setButton(false);
         setPost(check);
     }
-    const checkBoxHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setCheck(e.currentTarget.checked)
-    }
 
     return (
         <div className={s.itemsBlock}>
@@ -41,7 +38,7 @@ export const Request = () => {
             </div>
 
             <div className={s.items}>
-                <SuperCheckbox checked={check} onChange={checkBoxHandler}/>
+                <SuperCheckbox checked={check} onChangeChecked={setCheck}/>
                 <SuperButton onClick={clickHandler}>
                     Fetch
                 </SuperButton>
